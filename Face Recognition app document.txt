@@ -1,0 +1,126 @@
+Face Recognition Attendance System Documentation
+
+Introduction
+
+This project is a face recognition-based attendance system built using Python, OpenCV, and the face_recognition library. The application allows users to log in by recognizing their faces and to register new users into the system. Attendance logs are saved in a log.txt file, recording the name and datetime of successful logins.
+
+Features
+
+Face Recognition for Login
+
+Detects and recognizes registered users' faces.
+
+Logs attendance with timestamp into log.txt.
+
+User Registration
+
+Captures and saves new users' face images.
+
+Stores user data in the db directory for future recognition.
+
+Live Webcam Feed
+
+Streams webcam video feed within the application.
+
+Project Structure
+
+db Directory to store user face images.
+
+log.txt File to log attendance records.
+
+util.py Utility functions for button creation, image labeling, and message display.
+
+main.py Main script containing the application logic.
+
+Dependencies
+
+Python 3.x
+
+Libraries
+
+tkinter For GUI elements.
+
+cv2 (OpenCV) For webcam integration and image processing.
+
+PIL (Pillow) For handling image objects in the GUI.
+
+face_recognition For facial recognition.
+
+datetime For logging timestamps.
+
+subprocess For executing external face recognition commands.
+
+How It Works
+
+Login Process
+
+Captures a frame from the webcam.
+
+Uses the face_recognition library to match the face against registered user images in the db directory.
+
+Displays a welcome message and logs the event if a match is found.
+
+Displays an error message if no match is found.
+
+User Registration
+
+Captures a frame from the webcam.
+
+Prompts the user to input their name.
+
+Saves the captured image in the db directory with the entered name as the filename.
+
+Usage Instructions
+
+Set Up
+
+Ensure Python and all dependencies are installed.
+
+Create a directory named db in the same location as the script.
+
+Ensure face_recognition is installed and configured.
+
+Run the Application
+
+Execute the script using python main.py.
+
+Login
+
+Stand in front of the webcam.
+
+Press the Login button.
+
+Register a New User
+
+Press the Register New User button.
+
+Enter the username and click Accept.
+
+Attendance Logs
+
+Check log.txt for attendance records.
+
+Notes
+
+Ensure that the db directory and log.txt file are located in the same directory as the script.
+
+The application uses the first connected webcam by default.
+
+Limitations
+
+Requires a clear and well-lit image for accurate face recognition.
+
+Does not support multiple users in the frame during login.
+
+Future Improvements
+
+Add support for multiple webcams.
+
+Enhance accuracy by preprocessing the face images.
+
+Include a graphical report generator for attendance.
+
+Implement database integration for scalable storage.
+
+For any questions or issues, feel free to contact the author.
+

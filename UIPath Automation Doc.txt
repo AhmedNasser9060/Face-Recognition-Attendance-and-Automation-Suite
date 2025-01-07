@@ -1,0 +1,140 @@
+UIPath Automation for Face Recognition Attendance System
+
+Introduction
+
+This document provides an overview of two automation projects developed using UIPath to enhance the Face Recognition Attendance System. The first project automates the face recognition process, while the second processes the attendance logs (log.txt) to generate an Excel report and calculate any applicable deductions.
+
+Project 1: Automating Face Recognition Process
+
+Purpose
+
+Automates the execution of the face recognition application, simplifying the user interaction by eliminating the need to manually launch and operate the Python-based GUI.
+
+Features
+
+Script Execution:
+
+Launches the face recognition script (main.py) directly from UIPath.
+
+Error Handling:
+
+Provides notifications if any issues occur during script execution.
+
+Streamlined Process:
+
+Automatically closes the application once the process completes.
+
+Steps
+
+Open the UIPath Studio project.
+
+Configure the workflow to locate and execute the main.py script.
+
+Include activities for monitoring the script execution.
+
+Display a success message or error notification upon completion.
+
+Dependencies
+
+Python installed on the system.
+
+All required Python libraries for the face recognition system.
+
+Configured file paths for main.py and related resources.
+
+Project 2: Processing Attendance Logs
+
+Purpose
+
+Automates the conversion of attendance logs (log.txt) into a structured Excel format and calculates employee deductions based on defined rules.
+
+Features
+
+Log File Reading:
+
+Reads the log.txt file and extracts attendance records.
+
+Excel File Generation:
+
+Creates a new Excel file with attendance data.
+
+Columns include: Name, Date, Time, and Deduction.
+
+Deduction Calculation:
+
+Calculates deductions based on arrival times.
+
+Adds the deductions as a separate column in the Excel sheet.
+
+Error Handling:
+
+Validates the log.txt file format and handles missing or incorrect data gracefully.
+
+Steps
+
+Open the UIPath Studio project.
+
+Configure the workflow to locate and read the log.txt file.
+
+Extract attendance details using string operations.
+
+Apply business logic to calculate deductions (e.g., late arrival penalties).
+
+Write the processed data into an Excel file.
+
+Save the Excel file in a predefined directory.
+
+Dependencies
+
+UIPath Excel activities.
+
+Correctly formatted log.txt file.
+
+Business logic for deduction calculation.
+
+Usage Instructions
+
+Automating Face Recognition Process:
+
+Ensure Python is installed and the face recognition system is functional.
+
+Run the UIPath project to launch the script.
+
+Processing Attendance Logs:
+
+Ensure the log.txt file contains attendance data.
+
+Run the UIPath project to generate the Excel report.
+
+Open the Excel file to view processed attendance data and deductions.
+
+File Locations
+
+Input:
+
+Face recognition system: main.py.
+
+Log file: log.txt.
+
+Output:
+
+Processed Excel file: Attendance_Report.xlsx.
+
+Limitations
+
+Requires proper setup and configuration of paths in UIPath workflows.
+
+Deduction calculation rules must be predefined and consistent.
+
+Future Improvements
+
+Add a feature to email the attendance report automatically.
+
+Implement advanced analytics for attendance trends.
+
+Enhance error handling for file read/write operations.
+
+Integrate with cloud storage for better accessibility.
+
+For additional questions or support, feel free to contact the author.
+
