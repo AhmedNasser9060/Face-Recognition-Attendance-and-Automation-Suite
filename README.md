@@ -1,51 +1,78 @@
-# Face Recognition Attendance System
+# Face Recognition Attendance and Automation Suite
 
 ## Overview
-This project is a face recognition-based attendance system built using Python, OpenCV, and the `face_recognition` library. The application enables users to log in by recognizing their faces and registers new users into the system. Attendance logs are saved in a `log.txt` file, recording the name and date/time of successful logins.
+This project is a comprehensive attendance management system powered by face recognition and automation workflows. It combines Python-based face recognition technology with UIPath automation tools to streamline attendance tracking, log conversion, and deduction calculation.  
 
 ## Features
-- **Face Recognition for Login**: Detects and recognizes registered users' faces and logs attendance with timestamps.
-- **User Registration**: Captures and saves new users' face images for future recognition.
-- **Live Webcam Feed**: Streams the webcam video feed within the application.
-- **Attendance Logs**: Keeps attendance records in a `log.txt` file.
+### Face Recognition Attendance System (Python)
+- **Login with Face Recognition**: Identifies users via their facial features and logs attendance.  
+- **User Registration**: Allows new users to register by capturing their face and saving it for future recognition.  
+- **Attendance Logs**: Records name and timestamp in `log.txt` for each successful login.  
+- **Real-time Webcam Feed**: Streams live video feed directly in the application interface.  
+
+### Automation Processes (UIPath)
+1. **Face Recognition Process Automation**:  
+   - Automates the execution of the face recognition application.  
+   - Opens the Python script, manages inputs, and handles application flow.  
+
+2. **Log Conversion and Deduction Calculation**:  
+   - Converts the `log.txt` attendance file into an Excel file.  
+   - Automatically calculates deductions based on predefined rules.  
+   - Generates a clean, formatted Excel sheet for further analysis.  
 
 ## Project Structure
-- `db/`: Directory to store user face images.
-- `log.txt`: File to log attendance records.
-- `util.py`: Utility functions for button creation, image labeling, and message display.
-- `main.py`: Main script containing the application logic.
+### Python-Based Attendance System
+- **db/**: Directory containing registered user face images.  
+- **log.txt**: File where attendance records are stored.  
+- **util.py**: Utility functions for GUI components.  
+- **main.py**: Main application script for face recognition and GUI.  
 
-## Dependencies
-- **Python 3.x**
-- Libraries:
-  - `tkinter`: For GUI elements.
-  - `cv2 (OpenCV)`: For webcam integration and image processing.
-  - `PIL (Pillow)`: For handling image objects in the GUI.
-  - `face_recognition`: For facial recognition.
-  - `datetime`: For logging timestamps.
-  - `subprocess`: For executing external face recognition commands.
+### UIPath Automation
+- **Face Recognition Automation**: Manages the execution of the Python-based attendance system.  
+- **Log Conversion Automation**: Automates the transformation of `log.txt` into an Excel file and calculates deductions.  
 
-## How It Works
+## Prerequisites
+### Python
+- Python 3.x installed.  
+- Required Libraries:  
+  - `tkinter`, `cv2`, `PIL`, `face_recognition`, `subprocess`, `datetime`.  
 
-### Login Process:
-1. Captures a frame from the webcam.
-2. Uses the `face_recognition` library to match the face against registered user images in the `db` directory.
-3. Displays a welcome message and logs the event if a match is found.
-4. Displays an error message if no match is found.
+### UIPath
+- Installed UIPath Studio with active license.  
+- Basic understanding of creating and running workflows in UIPath.  
 
-### User Registration:
-1. Captures a frame from the webcam.
-2. Prompts the user to input their name.
-3. Saves the captured image in the `db` directory with the entered name as the filename.
+## Setup and Usage
+### Step 1: Run the Python Attendance System
+1. Clone the repository and navigate to the Python project directory.  
+2. Install the required Python libraries using `pip install -r requirements.txt`.  
+3. Create a `db` folder for storing face images.  
+4. Run the Python application using `python main.py`.  
 
-## Usage Instructions
+### Step 2: Automate with UIPath
+1. Open the provided UIPath projects in UIPath Studio.  
+2. Configure paths to match your setup (Python script location and log file path).  
+3. Execute the workflows:  
+   - **Face Recognition Process Automation**: Launches the Python system.  
+   - **Log Conversion Automation**: Processes the log file into an Excel sheet.  
 
-### Set Up:
-1. Ensure Python and all dependencies are installed.
-2. Create a directory named `db` in the same location as the script.
-3. Ensure `face_recognition` is installed and configured.
+## Outputs
+- **Python Application**:  
+  - Real-time face recognition for login.  
+  - Updated `log.txt` file with attendance details.  
 
-### Run the Application:
-Execute the script using the command:
-```bash
-python main.py
+- **UIPath Automation**:  
+  - Excel file containing attendance logs.  
+  - Deduction calculations based on attendance records.  
+
+## Limitations
+- Requires clear and well-lit images for accurate face recognition.  
+- Deduction rules need to be predefined and manually updated in UIPath.  
+
+## Future Enhancements
+- Add database integration for scalable attendance storage.  
+- Enhance face recognition accuracy with preprocessing techniques.  
+- Expand UIPath workflows for generating detailed attendance reports.  
+
+---
+
+For any questions or contributions, feel free to contact the project author.  
